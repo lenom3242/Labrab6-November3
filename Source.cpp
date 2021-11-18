@@ -11,16 +11,9 @@ public:
 		cout << "(" << x << "; " << y << ")" << endl;
 		cout << "ID: " << id << endl;
 	}
-	void changeloc(int newx, int newy)  {
-
-		x = newx; y = newy;
-	}
-	virtual int ploshadcalc() {
-		return 0;
-	}
-	virtual int perimetrcalc() {
-		return 0;
-	}
+	void changeloc(int newx, int newy)  { x = newx; y = newy; }
+	virtual int ploshadcalc() {	return 0;}
+	virtual int perimetrcalc() {return 0;}
 	GeomFigure(string id = "anon", int x = 0, int y=0) : x(x), y(y), id(id) {}
 	virtual ~GeomFigure() {
 		cout << "GeomFigure is deleted" << endl;
@@ -40,7 +33,6 @@ public:
 		cout << "Dlina: " << dlina << endl;
 		cout << "Shirina " << shirina << endl;
 		cout << "(" << x << "; " << y << ")" << endl;
-
 	}
 	int ploshadcalc() {
 		return 0;
@@ -49,35 +41,23 @@ public:
 		return 0;
 	}
 	Rectangle(int dlina = 1, int shirina = 1, string id = "anon", int x = 0, int y = 0) : dlina(dlina), shirina(shirina), GeomFigure(id, x, y) {}
-	~Rectangle() {
-		cout << "Rectangle is deleted" << endl;
-	}
+	~Rectangle() {cout << "Rectangle is deleted" << endl;}
 };
 class Circle : public GeomFigure {
 private:
 	int rad;
 public:
-	void setrad(int newrad) {
-		rad = newrad;
-	}
-	int getrad() {
-		return rad;
-	}
+	void setrad(int newrad) {rad = newrad;}
+	int getrad() {return rad;}
 	void information() {
 		cout << "ID: " << id << endl;
 		cout << "radius: " << rad << endl;
 		cout << "(" << x << "; " << y << ")" << endl;
 	}
-	int ploshadcalc() {
-		return 0;
-	}
-	int perimetrcalc() {
-		return 0;
-	}
+	int ploshadcalc() {	return 0;}
+	int perimetrcalc() {return 0;}
 	Circle(int rad=1, string id = "anon", int x=0, int y=0) : rad(rad), GeomFigure(id,x,y) {}
-	~Circle() {
-		cout << "Circle is deleted" << endl;
-	}
+	~Circle() {	cout << "Circle is deleted" << endl;}
 };
 class Triangle : public GeomFigure{
 private:
@@ -106,17 +86,13 @@ public:
 		if (newa + newb > newc && newa + newc > newb && newc + newb > newa) {
 			a = newa; b = newb; c = newc;
 		}
-		else
-		{
+		else{
 			a = 3;
 			b = 4;
 			c = 5;
 		}
-
 	}
-	~Triangle() {
-		cout << "Triangle is deleted" << endl;
-	}
+	~Triangle() {cout << "Triangle is deleted" << endl;	}
 };
 void changeloc(GeomFigure *ar[]) {
 	for (int d = 0; d < 10; d++) {
@@ -130,8 +106,7 @@ void main() {
 	int counter = 0;
 	counter = rand() % 3;
 	for (int i = 0; i < 10; i++) {
-		switch (counter)
-		{
+		switch (counter){
 		case 0: {
 			figures[i] = new Rectangle(rand() % 25, rand() % 25, "Rectangle " + to_string(rand() % 10000));
 			counter++;

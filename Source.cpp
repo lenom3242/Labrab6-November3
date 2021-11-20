@@ -103,8 +103,7 @@ void changeloc(GeomFigure **ar) {
 void main() {
 	srand(time(0));
 	GeomFigure** figures = new GeomFigure * [10];
-	int counter = 0;
-	counter = rand() % 3;
+	int counter = rand() % 3;
 	for (int i = 0; i < 10; i++) {
 		switch (counter){
 		case 0: {

@@ -121,11 +121,6 @@ void main() {
 			counter++;
 			break;
 		}
-		default: {
-			figures[i] = new Rectangle(rand() % 25, rand() % 25, "Rectangle " + to_string(rand() % 10000));
-			counter++;
-			break;
-		}
 		}
 		counter = rand() % 3;
 	}

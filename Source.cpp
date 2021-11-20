@@ -94,7 +94,7 @@ public:
 	}
 	~Triangle() {cout << "Triangle is deleted" << endl;	}
 };
-void changeloc(GeomFigure *ar[]) {
+void changeloc(GeomFigure **ar) {
 	for (int d = 0; d < 10; d++) {
 		ar[d]->changeloc(0, 0);
 	}
@@ -133,10 +133,10 @@ void main() {
 	for (int i = 0; i < 10; i++)
 		figures[i]->information();
 	changeloc(figures);
-	cout << "All figures are centered";
+	cout << "All figures are centered" << endl;
 	for (int i = 0; i < 10; i++)
 		figures[i]->information();
 	for (int i=0;i<10;i++)
 		delete[] figures[i];
-
+	int exit;
 }

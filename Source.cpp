@@ -95,8 +95,8 @@ public:
 	~Triangle() {cout << "Triangle is deleted" << endl;	}
 };
 void changeloc(GeomFigure **ar) {
-	for (int d = 0; d < 10; d++) {
-		ar[d]->changeloc(0, 0);
+	for (int i = 0; i < 10; i++) {
+		ar[i]->changeloc(0, 0);
 	}
 }
 

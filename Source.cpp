@@ -87,9 +87,7 @@ public:
 			a = newa; b = newb; c = newc;
 		}
 		else{
-			a = 3;
-			b = 4;
-			c = 5;
+			a = 3;	b = 4;	c = 5;
 		}
 	}
 	~Triangle() {cout << "Triangle is deleted" << endl;	}

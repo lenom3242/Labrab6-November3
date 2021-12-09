@@ -54,8 +54,8 @@ public:
 		cout << "radius: " << rad << endl;
 		cout << "(" << x << "; " << y << ")" << endl;
 	}
-	int ploshadcalc() {	return 0;}
-	int perimetrcalc() {return 0;}
+	int ploshadcalc() {	return 3.14*rad*rad;}
+	int perimetrcalc() {return 2*3.14*rad;}
 	Circle(int rad=1, string id = "anon", int x=0, int y=0) : rad(rad), GeomFigure(id,x,y) {}
 	~Circle() {	cout << "Circle is deleted" << endl;}
 };
@@ -106,17 +106,14 @@ void main() {
 		switch (counter){
 		case 0: {
 			figures[i] = new Rectangle(rand() % 25, rand() % 25, "Rectangle " + to_string(rand() % 10000));
-			counter++;
 			break;
 		}
 		case 1: {
 			figures[i] = new Circle(rand() % 10, "Circle " + to_string(rand() % 10000), rand() % 25, rand() % 25);
-			counter++;
 			break;
 		}
 		case 2: {
 			figures[i] = new Triangle("Triangle " + to_string(rand() % 10000), rand() % 25, rand() % 25, rand() % 25, rand() % 25, rand() % 25);
-			counter++;
 			break;
 		}
 		}

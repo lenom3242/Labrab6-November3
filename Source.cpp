@@ -35,10 +35,10 @@ public:
 		cout << "(" << x << "; " << y << ")" << endl;
 	}
 	int ploshadcalc() {
-		return 0;
+		return dlina*shirina;
 	}
 	int perimetrcalc() {
-		return 0;
+		return (dlina+shirina)*2;
 	}
 	Rectangle(int dlina = 1, int shirina = 1, string id = "anon", int x = 0, int y = 0) : dlina(dlina), shirina(shirina), GeomFigure(id, x, y) {}
 	~Rectangle() {cout << "Rectangle is deleted" << endl;}
